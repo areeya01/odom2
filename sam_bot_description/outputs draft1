@@ -1,0 +1,30 @@
+Type: nav_msgs/msg/Odometry
+Publisher count: 1
+Subscription count: 1
+
+Type: sensor_msgs/msg/Imu
+Publisher count: 1
+Subscription count: 1
+
+/ekf_filter_node
+  Subscribers:
+    /demo/imu: sensor_msgs/msg/Imu
+    /demo/odom: nav_msgs/msg/Odometry
+    /parameter_events: rcl_interfaces/msg/ParameterEvent
+    /set_pose: geometry_msgs/msg/PoseWithCovarianceStamped
+  Publishers:
+    /accel/filtered: geometry_msgs/msg/AccelWithCovarianceStamped
+    /diagnostics: diagnostic_msgs/msg/DiagnosticArray
+    /odometry/filtered: nav_msgs/msg/Odometry
+    /parameter_events: rcl_interfaces/msg/ParameterEvent
+    /rosout: rcl_interfaces/msg/Log
+    /tf: tf2_msgs/msg/TFMessage
+  Service Servers:
+     ...
+     
+ At time 242.781000000
+- Translation: [-0.172, 0.011, 0.127]
+- Rotation: in Quaternion [0.002, 0.092, -0.022, 0.995]
+
+
+
